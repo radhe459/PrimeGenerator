@@ -27,8 +27,8 @@ function Printprime() {
             count++;
         }
     }
-    document.getElementById("result").innerHTML = str;
-    document.getElementById("count").innerHTML = count;
+    document.getElementById("result").value = str;
+    document.getElementById("count").value = count;
 }
 
 function reset() {
