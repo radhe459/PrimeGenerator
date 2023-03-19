@@ -10,10 +10,11 @@ function Printprime() {
     b = Number.parseInt(b)
     let str = "";
     let count = 0;
-    if (a == 2 && a > 1)
-        str += 2;
-    if (a < 1 || b < a)
+    if (a < 2)
+        a = 2
+    if (a < 0 || b < a)
         str = "Enter valid start and end"
+
     for (let i = a; i <= b; i++) {
         let k = 0;
         for (let j = 2; j <= Math.floor(Math.sqrt(i)); j++) {
