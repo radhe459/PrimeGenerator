@@ -10,10 +10,15 @@ function Printprime() {
     b = Number.parseInt(b)
     let str = "";
     let count = 0;
+
+    if (a < 0 || b < a) {
+        str = "Enter valid start and end"
+        resultSet(str, count)
+        return
+    }
+
     if (a < 2)
         a = 2
-    if (a < 0 || b < a)
-        str = "Enter valid start and end"
 
     for (let i = a; i <= b; i++) {
         let k = 0;
@@ -28,8 +33,7 @@ function Printprime() {
             count++;
         }
     }
-    document.getElementById("result").value = str;
-    document.getElementById("count").value = count;
+    resultSet(str, count)
 }
 
 function reset() {
@@ -37,6 +41,11 @@ function reset() {
     document.getElementById("last").value = "";
     document.getElementById("result").value = "";
     document.getElementById("count").value = "";
+}
+
+function resultSet(str, count) {
+    document.getElementById("result").value = str;
+    document.getElementById("count").value = count;
 }
 
 
